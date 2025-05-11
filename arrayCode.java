@@ -1,5 +1,17 @@
 import java.util.*;
 public class arrayCode {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Number of tower: ");
+        int size = sc.nextInt();
+        int[] height = new int[size];
+        System.out.print("List the height of towers: ");
+        for (int i=0; i<size; i++) {
+            height[i]= sc.nextInt();
+        }
+        sc.close();
+        System.out.print(trappedwater(height));
+    }
     public static int trappedwater(int height[]) {
         int n = height.length;
         //max left height
@@ -23,17 +35,5 @@ public class arrayCode {
         }
         //trapped water
         return trappedwater;
-    }
-        public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Number of tower: ");
-        int size = sc.nextInt();
-        int[] height = new int[size];
-        System.out.print("List the height of towers: ");
-        for (int i=0; i<size; i++) {
-            height[i]= sc.nextInt();
-        }
-        sc.close();
-        System.out.print(trappedwater(height));
     }
 }
