@@ -17,7 +17,17 @@ public class mdArray {
         sc.close();
         System.out.println(sMatrix(matrix));
     }
-    int sMatrix(int[][] matrix) {
+    public static int sMatrix(int[][] matrix) {
+        int startCol = 0;
+        int startRow = 0;
+        int endCol = matrix.length-1;
+        int endRow = matrix[0].length-1;
 
+        //loops of spiral matrix
+
+        startCol++;
+        startRow++;
+        endCol--;
+        endRow--;
     }
 }
