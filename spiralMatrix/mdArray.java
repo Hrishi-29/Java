@@ -24,10 +24,15 @@ public class mdArray {
         int endRow = matrix[0].length-1;
 
         //loops of spiral matrix
+        while (startCol<=endCol && startRow<=endRow) {
+            for (int i=startCol; i<=endCol; i++) {
+                System.out.print(matrix[startRow][i]);
+            }
 
-        startCol++;
         startRow++;
         endCol--;
         endRow--;
+        startCol++;
+        }
     }
 }
