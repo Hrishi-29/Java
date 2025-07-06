@@ -15,9 +15,9 @@ public class mdArray {
         }
 
         sc.close();
-        System.out.println(sMatrix(matrix));
+        sMatrix(matrix);
     }
-    public static int sMatrix(int[][] matrix) {
+    public static void sMatrix(int[][] matrix) {
         int startCol = 0;
         int startRow = 0;
         int endCol = matrix.length-1;
@@ -27,6 +27,21 @@ public class mdArray {
         while (startCol<=endCol && startRow<=endRow) {
             for (int i=startCol; i<=endCol; i++) {
                 System.out.print(matrix[startRow][i]);
+            }
+            for (int j=startRow; j<=endRow; j++) {
+                System.out.print(matrix[j][endCol]);
+            }
+            for (int i=endCol+1; i<=startCol-1; i--) {
+                if (startRow==endRow) {
+                    break;
+                }
+                System.out.print(matrix[endRow][i]);
+            }
+            for (int j=endRow+1; j<=startRow-1; j--) {
+                if (startCol==endCol) {
+                    break;
+                }
+                System.out.print(matrix[j][startCol]);
             }
 
         startRow++;
