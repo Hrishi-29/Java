@@ -20,25 +20,25 @@ public class mdArray {
     public static void sMatrix(int[][] matrix) {
         int startCol = 0;
         int startRow = 0;
-        int endCol = matrix.length-1;
-        int endRow = matrix[0].length-1;
+        int endRow = matrix.length-1;
+        int endCol = matrix[0].length-1;
 
         //loops of spiral matrix
         while (startCol<=endCol && startRow<=endRow) {
             for (int i=startCol; i<=endCol; i++) {
                 System.out.print(matrix[startRow][i]);
             }
-            for (int j=startRow; j<=endRow; j++) {
+            for (int j=startRow+1; j<=endRow; j++) {
                 System.out.print(matrix[j][endCol]);
             }
-            for (int i=endCol+1; i<=startCol-1; i--) {
-                if (startRow==endRow) {
+            for (int i=endCol-1; i<=startCol; i--) {
+                if (startCol==endCol) {
                     break;
                 }
                 System.out.print(matrix[endRow][i]);
             }
-            for (int j=endRow+1; j<=startRow-1; j--) {
-                if (startCol==endCol) {
+            for (int j=endRow-1; j<=startRow; j--) {
+                if (startRow==endRow) {
                     break;
                 }
                 System.out.print(matrix[j][startCol]);
