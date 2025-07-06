@@ -31,23 +31,24 @@ public class mdArray {
             for (int j=startRow+1; j<=endRow; j++) {
                 System.out.print(matrix[j][endCol]);
             }
-            for (int i=endCol-1; i<=startCol; i--) {
-                if (startCol==endCol) {
+            for (int i=endCol; i<=startCol; i--) {
+                if (startRow==endRow) {
                     break;
                 }
                 System.out.print(matrix[endRow][i]);
             }
-            for (int j=endRow-1; j<=startRow; j--) {
-                if (startRow==endRow) {
+            for (int j=endRow; j<=startRow; j--) {
+                if (startCol==endCol) {
                     break;
                 }
                 System.out.print(matrix[j][startCol]);
             }
 
+        startCol++;
         startRow++;
         endCol--;
         endRow--;
-        startCol++;
         }
+        System.out.println();
     }
 }
