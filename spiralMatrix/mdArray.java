@@ -31,13 +31,13 @@ public class mdArray {
             for (int j=startRow+1; j<=endRow; j++) {
                 System.out.print(matrix[j][endCol]);
             }
-            for (int i=endCol-1; i<=startCol; i--) {
+            for (int i=endCol-1; i>=startCol; i--) {
                 if (startRow==endRow) {
                     break;
                 }
                 System.out.print(matrix[endRow][i]);
             }
-            for (int j=endRow-1; j<=startRow+1; j--) {
+            for (int j=endRow-1; j>=startRow+1; j--) {
                 if (startCol==endCol) {
                     break;
                 }
