@@ -7,9 +7,10 @@ public class mdArray {
         int size2 = sc.nextInt();
         System.out.println("Enter a elements: ");
         int[][] matrix = new int[size1][size2];
-        int arrSize = matrix.length;
-        for (int i=0; i<=arrSize-1; i++) {
-            for (int j=0; j<=arrSize-1; j++) {
+        int n = matrix.length;
+        int m = matrix[0].length;
+        for (int i=0; i<=n-1; i++) {
+            for (int j=0; j<=m-1; j++) {
                 matrix[i][j] = sc.nextInt();
             }
         }
