@@ -18,5 +18,19 @@ public class arrayCode {
             }
             System.out.println();
         }
+        System.out.print(diSum(arr) + " ");
+    }
+    public static int diSum(int arr[][]) {
+        for (int i= 0; i<arr.length; i++) {
+            for (int j= 0; j<arr[0].length; j++) {
+                if (i==j) {
+                    return arr[i][j];
+                }
+                else {
+                    return 0;
+                }
+            }
+        }
+        return 0;
     }
 }
