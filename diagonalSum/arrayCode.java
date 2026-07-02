@@ -21,16 +21,13 @@ public class arrayCode {
         System.out.print(diSum(arr) + " ");
     }
     public static int diSum(int arr[][]) {
+        int sum = 0;
+        int sum1 = 0;
+        int sum2 = 0;
         for (int i= 0; i<arr.length; i++) {
-            for (int j= 0; j<arr[0].length; j++) {
-                if (i==j) {
-                    return arr[i][j];
-                }
-                else {
-                    return 0;
-                }
-            }
+            sum1 += arr[i][i];
+            sum2 += arr[i][arr.length-1-i];
         }
-        return 0;
+        return sum = sum1 + sum2;
     }
 }
