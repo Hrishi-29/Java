@@ -27,3 +27,32 @@
 //     }
 // }
 
+// Create an array and print the target element
+import java.util.*;
+class arrayPractice1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a size of an array: ");
+        short size = sc.nextShort();
+        short[] val = new short[size];
+        System.out.print("Enter an element: ");
+        for (short i = 0; i<val.length; i++) {
+            val[i] = sc.nextShort();
+        }
+        for (short i = 0; i<val.length; i++) {
+            System.out.print(val[i] + " ");
+        }
+        System.out.print("Enter a target: ");
+        short n = sc.nextShort();
+        sc.close();
+        System.out.print(tNum(val, n));
+    }
+    static short tNum(short val[], short n) {
+        for (short i=0; i<val.length; i++) {
+            if (n == val[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+}
