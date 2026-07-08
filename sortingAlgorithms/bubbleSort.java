@@ -16,19 +16,17 @@ public class bubbleSort {
 	public static int[] bubbleSorting(int arr[]) {
 		boolean swapped = false;
 		for (int i = 0; i<arr.length; i++) {
-			if (!swapped) {
-				for (int j=0; j<arr.length-1; j++) {
-					if (arr[i]<arr[j+1]) {
-						int temp = arr[i];
-						arr[i] = arr[j+1];
-						arr[j+1] = temp;
-						swapped = true;
-					}
+			for (int j=0; j<arr.length-1; j++) {
+				if (arr[i]<arr[j+1]) {
+					int temp = arr[i];
+					arr[i] = arr[j+1];
+					arr[j+1] = temp;
+					swapped = true;
 				}
 			}
-		}
-		if (swapped) {
-			return arr;
+			if (!swapped) {
+				return arr;
+			}
 		}
 	}
 }
