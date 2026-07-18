@@ -15,15 +15,15 @@ public class selectionSort {
 	}
 	public static int[] selectionSort(int arr[]) {
 		for (int i=0; i<arr.length; i++) {
-			int larger = 0;
-		 	for (int j=0; j<arr.length-i-1; j++) {
-		 		if (arr[j]>arr[larger]) {
-		 			larger = j;
-		 		}
-		 	}
-		 	int temp = arr[larger];
-		 	arr[larger] = arr[i];
-		 	arr[i] = temp; 	                                            
+			int larger = i;
+			for (int j = i+1; j<arr.length; j++) {
+				if (arr[j]>arr[larger]) {
+					larger = j;
+				}
+			}
+			int temp = arr[larger];
+			arr[larger] = arr[i];
+			arr[i] = temp;                                 
 		}
 		return arr;
 	}
